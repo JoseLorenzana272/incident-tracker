@@ -28,7 +28,6 @@ jobs:
           path: ./
           base: HEAD~1
           head: HEAD
-          extra_args: --only-verified
 
       - name: Setup Node.js 20
         uses: actions/setup-node@v4
