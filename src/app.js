@@ -10,7 +10,7 @@ const { auditLogger }     = require('./middleware/auditLogger');
 // 1) Uncomment the next line to simulate a hardcoded secret (bad practice)
 // 2) Commit/push and let CI fail on secret scanning
 // 3) Re-comment it and use .env / GitHub Secrets so CI passes
-// process.env.JWT_SECRET = 'sk_live_demo_hardcoded_secret_do_not_use';
+process.env.JWT_SECRET = 'esto_para_nada_se_deberia_de_haceeeer';
 
 const app = express();
 
