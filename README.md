@@ -42,12 +42,12 @@ El proyecto ya trae un toggle listo en [src/app.js](src/app.js):
 2. Busca esta linea comentada:
 
 ```js
-// process.env.JWT_SECRET = 'sk_live_demo_hardcoded_secret_do_not_use';
+// process.env.DATABASE_URL = 'postgres://admin:SuperSecretPassword123@db.production.example.com:5432/main';
 ```
 
 3. Para provocar el fallo de seguridad en CI, descomenta la linea, haz commit y push
-4. TruffleHog debe marcar el pipeline en rojo
-5. Para arreglarlo, vuelve a comentar la linea y usa `JWT_SECRET` desde `.env` o GitHub Secrets
+4. TruffleHog debe marcar el pipeline en rojo (¡detectara la URI de Postgres!)
+5. Para arreglarlo, vuelve a comentar la linea. Explica que los secretos van en el `.env` (localmente) o en los **GitHub Secrets** (para CI/CD).
 6. Haz push otra vez y verifica pipeline en verde
 
 Este flujo esta disenado para mostrar DevSecOps de forma visual en vivo.
