@@ -41,8 +41,7 @@ jobs:
       - name: Run tests
         run: npm test
         env:
-          JWT_SECRET: ${{ secrets.JWT_SECRET }}
-          ADMIN_SECRET: ${{ secrets.ADMIN_SECRET }}
+
           NODE_ENV: test
 
       - name: Upload coverage report

@@ -7,10 +7,10 @@ const { errorHandler }    = require('./middleware/errorHandler');
 const { auditLogger }     = require('./middleware/auditLogger');
 
 // Demo toggle for class:
-// 1) Uncomment the next line to simulate a hardcoded secret (bad practice)
+// 1) Replace the string below with a real-looking database URL (e.g., from the README)
 // 2) Commit/push and let CI fail on secret scanning
-// 3) Re-comment it and use .env / GitHub Secrets so CI passes
-// process.env.DATABASE_URL = 'postgres://admin:SuperSecretPassword123@db.production.example.com:5432/main';
+// 3) Delete the URL and use .env / GitHub Secrets so CI passes
+// process.env.DATABASE_URL = 'postgres://ESCRIBE_UN_USUARIO:Y_UN_PASSWORD@AQUI.com:5432/main';
 
 const app = express();
 

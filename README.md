@@ -36,18 +36,18 @@ npm start
 
 ## Flujo de demo para clase (secreto hardcodeado)
 
-El proyecto ya trae un toggle listo en [src/app.js](src/app.js):
+El proyecto viene limpio. Para la demo de clase:
 
 1. Abre [src/app.js](src/app.js)
-2. Busca esta linea comentada:
+2. Busca la linea comentada de `process.env.DATABASE_URL` y reemplazala por esta credencial falsa pero de aspecto real, descomentandola:
 
 ```js
-// process.env.DATABASE_URL = 'postgres://admin:SuperSecretPassword123@db.production.example.com:5432/main';
+process.env.DATABASE_URL = 'postgres://admin:SuperSecretPassword123@db.production.example.com:5432/main';
 ```
 
-3. Para provocar el fallo de seguridad en CI, descomenta la linea, haz commit y push
+3. Para provocar el fallo de seguridad en CI, haz commit y push
 4. TruffleHog debe marcar el pipeline en rojo (¡detectara la URI de Postgres!)
-5. Para arreglarlo, vuelve a comentar la linea. Explica que los secretos van en el `.env` (localmente) o en los **GitHub Secrets** (para CI/CD).
+5. Para arreglarlo, borra la credencial o conectate usando `process.env.DATABASE_URL` (para que venga de un secreto seguro).
 6. Haz push otra vez y verifica pipeline en verde
 
 Este flujo esta disenado para mostrar DevSecOps de forma visual en vivo.
