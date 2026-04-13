@@ -6,11 +6,8 @@ const { adminRouter }     = require('./routes/admin');
 const { errorHandler }    = require('./middleware/errorHandler');
 const { auditLogger }     = require('./middleware/auditLogger');
 
-// Demo toggle for class:
-// 1) Replace the string below with a real-looking database URL (from your personal notes)
-// 2) Commit/push and let CI fail on secret scanning
-// 3) Delete the URL and use .env / GitHub Secrets so CI passes
-// process.env.DATABASE_URL = 'pega_el_secreto_aqui_durante_la_demo';
+// here, bad practice:
+
 const app = express();
 
 app.use(express.json());
