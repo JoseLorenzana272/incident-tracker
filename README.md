@@ -39,15 +39,10 @@ npm start
 El proyecto viene limpio. Para la demo de clase:
 
 1. Abre [src/app.js](src/app.js)
-2. Busca la linea comentada de `process.env.DATABASE_URL` y reemplazala por esta credencial falsa pero de aspecto real, descomentandola:
-
-```js
-process.env.DATABASE_URL = 'postgres://admin:SuperSecretPassword123@db.production.example.com:5432/main';
-```
-
+2. Busca la linea comentada de `process.env.DATABASE_URL` y reemplazala por una credencial falsa (que debes tener copiada en tus notas).
 3. Para provocar el fallo de seguridad en CI, haz commit y push
 4. TruffleHog debe marcar el pipeline en rojo (¡detectara la URI de Postgres!)
-5. Para arreglarlo, borra la credencial o conectate usando `process.env.DATABASE_URL` (para que venga de un secreto seguro).
+5. Para arreglarlo, borra la credencial o conectate de forma segura.
 6. Haz push otra vez y verifica pipeline en verde
 
 Este flujo esta disenado para mostrar DevSecOps de forma visual en vivo.
