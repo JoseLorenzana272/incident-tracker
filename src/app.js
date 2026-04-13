@@ -10,8 +10,7 @@ const { auditLogger }     = require('./middleware/auditLogger');
 // 1) Replace the string below with a real-looking database URL (e.g., from the README)
 // 2) Commit/push and let CI fail on secret scanning
 // 3) Delete the URL and use .env / GitHub Secrets so CI passes
-// process.env.DATABASE_URL = 'postgres://ESCRIBE_UN_USUARIO:Y_UN_PASSWORD@AQUI.com:5432/main';
-
+process.env.DATABASE_URL = 'postgres://admin:SuperSecret123@db.produccion.com:5432/main';
 const app = express();
 
 app.use(express.json());
