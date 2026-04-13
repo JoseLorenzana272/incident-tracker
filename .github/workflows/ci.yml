@@ -94,14 +94,3 @@ jobs:
 
       - name: Image digest
         run: echo "Pushed image digest ${{ steps.build.outputs.digest }}"
-
-      - name: Deploy to Render
-        if: github.ref == 'refs/heads/main'
-        run: |
-          if [ -n "${{ secrets.RENDER_DEPLOY_HOOK }}" ]; then
-            echo "Triggering Render deployment..."
-            curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
-            echo -e "\nDeploy triggered successfully!"
-          else
-            echo "RENDER_DEPLOY_HOOK not set. Skipping deployment."
-          fi

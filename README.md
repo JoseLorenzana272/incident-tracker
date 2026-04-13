@@ -49,25 +49,6 @@ Este flujo esta disenado para mostrar DevSecOps de forma visual en vivo.
 
 ---
 
-## 🚀 Despliegue a Producción (Render)
-
-Para el paso final de la conferencia (Continuous Deployment completo), puedes conectar este repo a [Render.com](https://render.com) gratis:
-
-1. Ve a Render.com y crea un nuevo **"Web Service"**.
-2. Elige **"Deploy an existing image from a registry"**.
-3. Pon la imagen URL: `ghcr.io/TU_USUARIO/incident-tracker:latest`.
-4. En **Environment Variables**, añade:
-   - `JWT_SECRET` (un valor seguro)
-   - `ADMIN_SECRET` (un valor seguro)
-   - `PORT` = `3000`
-5. En la configuración del servicio, copia tu **Deploy Hook URL**.
-6. Ve a Github \> *Settings \> Secrets and variables \> Actions \> New repository secret*. 
-7. Nómbralo `RENDER_DEPLOY_HOOK` y pega tu URL de Render.
-
-¡Listo! Cuando la demo avance y Github Actions haga el build, automáticamente le avisará a Render para que se actualice y quede viva con una URL pública para los asistentes.
-
----
-
 ## Quickstart con Docker
 
 ```bash
