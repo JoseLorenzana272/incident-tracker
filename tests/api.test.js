@@ -1,4 +1,6 @@
-process.env.JWT_SECRET     = 'test-secret-super-larga-para-jest-12345';
+// Carga las variables del archivo .env localmente para que los tests pasen
+require('dotenv').config();
+
 process.env.ADMIN_SECRET   = 'test-admin-secret';
 process.env.NODE_ENV       = 'test';
 
