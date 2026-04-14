@@ -7,7 +7,6 @@ const { errorHandler }    = require('./middleware/errorHandler');
 const { auditLogger }     = require('./middleware/auditLogger');
 
 // here, bad practice:
-process.env.DATABASE_URL = 'postgres://admin:SuperSecret123@db.produccion.com:5432/main';
 
 const app = express();
 
