@@ -6,7 +6,7 @@ const { adminRouter }     = require('./routes/admin');
 const { errorHandler }    = require('./middleware/errorHandler');
 const { auditLogger }     = require('./middleware/auditLogger');
 
-// here, bad practice:
+// here, bad practice: (just simulate a postgres connection pool)
 
 const app = express();
 
